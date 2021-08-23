@@ -22,7 +22,7 @@ nav span {
 }
 
 .curve {
-  position: absolute;
+  position: relative;
   height: 100px;
   width: 100%;
 }
