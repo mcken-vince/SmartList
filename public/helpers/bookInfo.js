@@ -12,7 +12,6 @@ const bookInfo = function(input) {
       const item = response['items'][0]['volumeInfo'];
 
       const title = item['title'];
-      const author = item['authors'].join(', ');
       const image = item['imageLinks']['thumbnail'];
       const description = item['description'];
 
