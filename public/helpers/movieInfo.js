@@ -16,11 +16,11 @@ const movieInfo = function(input) {
       const id = item['id'];
 
       // The description below grabs the year of the release, not the actual description...
-      const officialTitle = item['title'] + ' ' + item['description'];
+      // const officialTitle = item['title'] + ' ' + item['description'];
       const imageLink = item['image'];
+      const fullLink = 'https://www.imdb.com/title/' + 'id'
 
-      movieArr.push(officialTitle);
-      movieArr.push(imageLink);
+      movieArr.push(input, imageLink, fullLink);
 
       // Using the id we just obtained, make another request to get description.
       const descriptionQuery = 'https://imdb-api.com/en/API/Title/k_sm621mte/';

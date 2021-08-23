@@ -15,11 +15,10 @@ const foodInfo = function(input) {
       const item = response1['results'][0];
 
       const id = item['id'];
-      const recipeName = item['title'];
+      // const recipeName = item['title'];
       const recipePic = item['image'];
 
-      foodArr.push(recipeName);
-      foodArr.push(recipePic);
+      foodArr.push(input, recipePic);
 
       const descriptionQuery = 'https://api.spoonacular.com/recipes/' + id.toString();
       const access = '/information?apiKey=4523f0dd2bf7428899992a676ad63136';
@@ -29,8 +28,9 @@ const foodInfo = function(input) {
       // Parse the second response, and get the recipe description... in HTML!
       const response2 = JSON.parse(body2);
       const detail = response2['summary'];
+      const foodLink = response2['sourceUrl'];
 
-      foodArr.push(detail);
+      foodArr.push(foodLink, detail);
       console.log(foodArr);
       return foodArr;
     })
