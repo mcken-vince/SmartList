@@ -1,5 +1,11 @@
 -- Drop and recreate Widgets table (Example)
 
+DROP TABLE IF EXISTS reminder_types CASCADE;
+CREATE TABLE reminder_types (
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL
+);
+
 DROP TABLE IF EXISTS reminders CASCADE;
 CREATE TABLE reminders (
   id SERIAL PRIMARY KEY NOT NULL,
@@ -9,10 +15,4 @@ CREATE TABLE reminders (
   image_link VARCHAR(255),
   description TEXT, 
   time DATE NOT NULL
-);
-
-DROP TABLE IF EXISTS reminder_types CASCADE;
-CREATE TABLE reminder_types (
-  id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL
 );
