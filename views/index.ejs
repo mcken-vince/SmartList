@@ -23,6 +23,7 @@
     </nav>
     <div class="curve"></div>
     <header>
+      <% if (!username) { %>
       <form action="/login" method="POST">
         <div class="form-group">
           <label for="username">Username:</label>
@@ -30,6 +31,32 @@
         </div>
         <button type="submit">Login</button>
       </form>
+      <% } else { %>
+        <div>My name Jeff *hackernoises* <%= username %></div>
+        <form action="/logout" method="POST">
+          <button type="submit">Logout</button>
+        </form>
+
+      </header>
+        <div>
+          <ul class="movies lists">
+            <li>Lord of the Rings</li>
+            <li>The Hobbit</li>
+          </ul>
+          <ul class="foods lists">
+            <li>Pasta Marinara</li>
+            <li>peanut butter</li>
+          </ul>
+          <ul class="books lists">
+            <li>Of Mice and Men</li>
+            <li>Moby Dick</li>
+          </ul>
+          <ul class="products lists">
+            <li>blender</li>
+            <li>watch</li>
+          </ul>
+        </div>
+      <% } %>
     </header>
 
   </body>

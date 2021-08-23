@@ -41,12 +41,14 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 // const remindersRoutes = require("./routes/reminders");
 const loginRoutes = require("./routes/login");
+const logoutRoutes = require("./routes/logout");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 app.use("/api/users", usersRoutes(db));
 // app.use("/api/reminders", remindersRoutes(db));
 app.use("/login", loginRoutes(db));
+app.use("/logout", logoutRoutes());
 // Note: mount other resources here, using the same pattern above
 
 
@@ -55,9 +57,9 @@ app.use("/login", loginRoutes(db));
 // Separate them into separate routes files (see above).
 app.get("/", (req, res) => {
   const templateVars = {
-    user_id: req.body.cookies
+    username: req.session.username
   }
-  res.render("index");
+  res.render("index", templateVars);
 });
 
 app.listen(PORT, () => {

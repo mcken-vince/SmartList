@@ -15,11 +15,13 @@ module.exports = (db) => {
     db.query(query, [req.body.username])
       .then(response => {
         if (response.rows.length === 0) {
-          return;
+          console.log("user doesn't exist");
+          res.redirect('/');
         }
 
         const username = response.rows[0]['name'];
-
+        req.session.username = username;
+        res.redirect('/');
       })
       .catch(err => {
         console.log(err);
