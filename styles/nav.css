@@ -1,0 +1,42 @@
+nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 150px;
+  padding: 20px 20vw;
+  background-color: #00101C;
+}
+
+nav span {
+  font-family: 'Rampart One', cursive;
+  color: #EEE;
+  font-size: 50px;
+}
+
+.curve {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+}
+
+.curve::after {
+  content: '';
+  position: absoulte;
+  display: block;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  bottom: 0;
+  height: 85%;
+  width: 100%;
+  background-color: #F7760E;
+  z-index: -1;
+}
+/*# sourceMappingURL=nav.css.map */
