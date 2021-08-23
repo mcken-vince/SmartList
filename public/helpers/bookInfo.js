@@ -14,9 +14,9 @@ const bookInfo = function(input) {
       // const title = item['title'];
       const image = item['imageLinks']['thumbnail'];
       const description = item['description'];
-      const previewLink = item['previewLink'];
+      const infoLink = item['infoLink'];
 
-      bookArr.push(input, image, previewLink, description);
+      bookArr.push(input, image, infoLink, description);
       console.log(bookArr);
       return bookArr;
     })

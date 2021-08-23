@@ -18,7 +18,7 @@ const movieInfo = function(input) {
       // The description below grabs the year of the release, not the actual description...
       // const officialTitle = item['title'] + ' ' + item['description'];
       const imageLink = item['image'];
-      const fullLink = 'https://www.imdb.com/title/' + 'id'
+      const fullLink = 'https://www.imdb.com/title/' + id
 
       movieArr.push(input, imageLink, fullLink);
 
