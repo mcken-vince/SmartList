@@ -10,18 +10,22 @@ const router  = express.Router();
 
 module.exports = (db) => {
   router.get("/", (req, res) => {
-    let query = `SELECT * FROM reminders`;
+    let query = `
+    SELECT * 
+    FROM reminders
+    WHERE user_id = $1
+    `;
     console.log(query);
-    db.query(query)
+    db.query(query, [req.session.userID])
       .then(data => {
         const reminders = data.rows;
         res.json({ reminders });
       })
-      // .catch(err => {
-      //   res
-      //     .status(500)
-      //     .json({ error: err.message });
-      // });
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: err.message });
+      });
   });
   return router;
 };

@@ -21,6 +21,7 @@ module.exports = (db) => {
 
         const username = response.rows[0]['name'];
         req.session.username = username;
+        req.session.userID = response.rows[0]['id'];
         res.redirect('/');
       })
       .catch(err => {
