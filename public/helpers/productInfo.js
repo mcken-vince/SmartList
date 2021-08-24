@@ -20,6 +20,7 @@ const productInfo = function(input) {
 
       return productArr;
     })
+    .catch((err) => console.log(err));
 };
 
 module.exports = productInfo;

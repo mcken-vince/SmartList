@@ -10,8 +10,6 @@ const sass       = require("node-sass-middleware");
 const app        = express();
 const morgan     = require('morgan');
 const cookieSession = require('cookie-session');
-const typeResponse = require('./public/helpers/wolframAPI');
-const movieInfo = require('./public/helpers/movieInfo');
 app.use(cookieSession({
   name: 'session',
   keys: ['someValue'],
