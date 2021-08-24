@@ -1,0 +1,25 @@
+@import 'variables';
+
+.list-container {
+  display: flex;
+
+  h3 {
+    text-align: center;
+  }
+
+  div {
+    width: 25%;
+    border: 2px solid rgba($color: $color-4, $alpha: 0.7);
+    margin: 10px;
+    box-shadow: 3px 3px rgba($color: $color-4, $alpha: 0.25);
+
+    ul {
+      padding:10px;
+    }
+
+
+    li {
+      list-style:none;
+    }
+  }
+}

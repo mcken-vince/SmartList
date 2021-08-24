@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/content.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,37 +21,49 @@
 
   <body>
     <nav>
-      <span>Smart TODO List</span>
+      <span class="user-input-toggle">Smart TODO List</span>
       <% if (!username) { %>
         <form class="nav-top-right" action="/login" method="POST">
           <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" name="username" placeholder="Enter Username">
           </div>
-          <button type="submit">Login</button>
+          <button class='identify' type="submit">Login</button>
         </form>
         <% } else { %>
           <div class="nav-top-right">
             <div>My name Jeff *hackernoises* <%= username %></div>
             <form action="/logout" method="POST">
-              <button type="submit">Logout</button>
+              <button class='identify' type="submit">Logout</button>
             </form>
           </div>
         <% } %>
     </nav>
-    <header>
-
-    </header>
     <% if (username) { %>
-      <form id="new-item" action='/reminders' method="POST">
-        <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
-        <button class="new-item" type="submit">Submit</button>
-      </form>
-      <div>
-        <ul class="movies lists"></ul>
-        <ul class="foods lists"></ul>
-        <ul class="books lists"></ul>
-        <ul class="products lists"></ul>
+      <header class="header-toggle">
+        <h2>Why can you drink the drink but can't food the food?</h2>
+        <form id="new-item" action='/reminders' method="POST">
+          <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
+          <button class="new-item" type="submit">Submit</button>
+        </form>
+      </header>
+      <div class="list-container">
+        <div>
+          <h3>Movies</h3>
+          <ul class="movies lists"></ul>
+        </div>
+        <div>
+          <h3>Foods</h3>
+          <ul class="foods lists"></ul>
+        </div>
+        <div>
+          <h3>Books</h3>
+          <ul class="books lists"></ul>
+        </div>
+        <div>
+          <h3>Products</h3>
+          <ul class="products lists"></ul>
+        </div>
       </div>
     <% } %>
 

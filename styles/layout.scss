@@ -1,14 +1,12 @@
 // See: https://sass-lang.com/
+@import 'variables';
 
 body {
   background-color: #EEE;
+  font-family:$font-main;
 
   h1 {
     color: #EEE;
   }
 }
 
-.lists {
-  float: left;
-  width: 25%;
-}
