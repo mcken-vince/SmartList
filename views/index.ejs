@@ -20,43 +20,35 @@
   <body>
     <nav>
       <span>Smart TODO List</span>
+      <% if (!username) { %>
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter Username" style="width: 300px">
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <% } else { %>
+          <div>My name Jeff *hackernoises* <%= username %></div>
+          <form action="/logout" method="POST">
+            <button type="submit">Logout</button>
+          </form>
+        <% } %>
     </nav>
     <div class="curve"></div>
-    <header>
-      <% if (!username) { %>
-      <form action="/login" method="POST">
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" name="username" placeholder="Enter Username" style="width: 300px">
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      <% } else { %>
-        <div>My name Jeff *hackernoises* <%= username %></div>
-        <form action="/logout" method="POST">
-          <button type="submit">Logout</button>
-        </form>
-      </header>
+
+    <% if (username) { %>
       <form id="new-item" action='/reminders' method="POST">
         <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted" style="width: 300px">
         <button class="new-item" type="submit">Submit</button>
       </form>
         <div>
-          <ul class="movies lists">
-
-          </ul>
-          <ul class="foods lists">
-
-          </ul>
-          <ul class="books lists">
-
-          </ul>
-          <ul class="products lists">
-
-          </ul>
+          <ul class="movies lists"></ul>
+          <ul class="foods lists"></ul>
+          <ul class="books lists"></ul>
+          <ul class="products lists"></ul>
         </div>
       <% } %>
-    </header>
 
   </body>
 </html>
