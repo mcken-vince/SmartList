@@ -8,10 +8,12 @@
     <!-- Local SCSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/content.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -19,45 +21,51 @@
 
   <body>
     <nav>
-      <span>Smart TODO List</span>
-    </nav>
-    <div class="curve"></div>
-    <header>
+      <span class="user-input-toggle">Smart TODO List</span>
       <% if (!username) { %>
-      <form action="/login" method="POST">
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" name="username" placeholder="Enter Username" style="width: 300px">
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      <% } else { %>
-        <div>My name Jeff *hackernoises* <%= username %></div>
-        <form action="/logout" method="POST">
-          <button type="submit">Logout</button>
+        <form class="nav-top-right" action="/login" method="POST">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter Username">
+          </div>
+          <button class='identify' type="submit">Login</button>
+        </form>
+        <% } else { %>
+          <div class="nav-top-right">
+            <div>My name Jeff *hackernoises* <%= username %></div>
+            <form action="/logout" method="POST">
+              <button class='identify' type="submit">Logout</button>
+            </form>
+          </div>
+        <% } %>
+    </nav>
+    <% if (username) { %>
+      <header class="header-toggle">
+        <h2>Why can you drink the drink but can't food the food?</h2>
+        <form id="new-item" action='/reminders' method="POST">
+          <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
+          <button class="new-item" type="submit">Submit</button>
         </form>
       </header>
-      <form id="new-item" action='/reminders' method="POST">
-        <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted" style="width: 300px">
-        <button class="new-item" type="submit">Submit</button>
-      </form>
-      <div class="labels">
-        <h3>Movies</h3>
-        <h3>Foods</h3>
-        <h3>Books</h3>
-        <h3>Products</h3>
-      </div>
+      <div class="list-container">
         <div>
+          <h3>Movies</h3>
           <ul class="movies lists"></ul>
-
+        </div>
+        <div>
+          <h3>Foods</h3>
           <ul class="foods lists"></ul>
-
+        </div>
+        <div>
+          <h3>Books</h3>
           <ul class="books lists"></ul>
-
+        </div>
+        <div>
+          <h3>Products</h3>
           <ul class="products lists"></ul>
         </div>
-      <% } %>
-    </header>
+      </div>
+    <% } %>
 
   </body>
 </html>

@@ -17,7 +17,7 @@ $(() => {
             case 3:
               $('.foods').append(`<li>${item.name}</li>`);
               break;
-            case 4: 
+            case 4:
               $('.products').append(`<li>${item.name}</li>`);
               break;
           }
@@ -35,6 +35,10 @@ $(() => {
 
     $.post('/reminders', $userSubmission)
       .then(appendListElements)
-  })
+  });
+
+  $(".user-input-toggle").on("click", () => {
+    $(".header-toggle").slideToggle();
+  });
   appendListElements();
 });
