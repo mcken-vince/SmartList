@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,OAAO;CAK1B;;AAND,AAGE,IAHE,CAGF,EAAE,CAAC;EACD,KAAK,EAAE,IAAI;CACZ",
+    "mappings": "AAGA,AAAA,IAAI,CAAC;EACH,gBAAgB,ECJR,wBAAO;EDKf,WAAW,ECCD,SAAS,EAAE,UAAU;CDIhC;;AAPD,AAIE,IAJE,CAIF,EAAE,CAAC;EACD,KAAK,EAAE,IAAI;CACZ",
     "sources": [
-        "layout.scss"
+        "layout.scss",
+        "variables.scss"
     ],
     "names": [],
     "file": "layout.css"

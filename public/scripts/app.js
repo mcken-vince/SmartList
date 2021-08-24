@@ -7,18 +7,19 @@ $(() => {
         $('.foods').empty();
         $('.products').empty();
         for (const item of data['reminders']) {
+          const listElement = `<li class="reminder-${item.id}">${item.name}<i class="fas fa-solid fa-trash"></i></li>`;
           switch(item['type_id']) {
             case 1:
-              $('.movies').append(`<li class=reminder-${item.id}>${item.name}</li>`);
+              $('.movies').append(listElement);
               break;
             case 2:
-              $('.books').append(`<li class=reminder-${item.id}>${item.name}</li>`);
+              $('.books').append(listElement);
               break;
             case 3:
-              $('.foods').append(`<li class=reminder-${item.id}>${item.name}</li>`);
+              $('.foods').append(listElement);
               break;
             case 4:
-              $('.products').append(`<li class=reminder-${item.id}>${item.name}</li>`);
+              $('.products').append(listElement);
               break;
           }
         }
@@ -28,17 +29,25 @@ $(() => {
       });
   };
 
+  $("ul").on("click",'.fa-trash', function() {
+    const id = $(this).parent().attr("class").split("-")[1];
+
+    $.ajax({
+      url: `/reminders/${id}`,
+      type: 'DELETE',
+      success: () => {
+        appendListElements();
+      }
+    });
+  });
+
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
     const $userSubmission = $(this).serialize();
     console.log($userSubmission);
 
-    $.post('/reminders', $userSubmission)
+    $.post($(this).attr('action'), $userSubmission)
       .then(appendListElements)
-  });
-
-  $(".user-input-toggle").on("click", () => {
-    $(".header-toggle").slideToggle();
   });
   appendListElements();
 });

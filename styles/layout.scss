@@ -2,7 +2,7 @@
 @import 'variables';
 
 body {
-  background-color: #EEE;
+  background-color: rgba($color: $color-1, $alpha: 0.2);
   font-family:$font-main;
 
   h1 {
