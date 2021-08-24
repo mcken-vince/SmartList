@@ -28,4 +28,4 @@ const typeResponse = function(input) {
     });
 };
 
-typeResponse(process.argv[2]);
+module.exports = typeResponse;

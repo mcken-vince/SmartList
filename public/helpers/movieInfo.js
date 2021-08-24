@@ -2,10 +2,11 @@ const request = require('request-promise-native');
 
 const movieInfo = function(input) {
 
+  const typeID = 1;
   const movieArr = [];
 
   query = 'https://imdb-api.com/en/API/SearchMovie/k_sm621mte/'
-  request(query + input)
+  return request(query + input)
     .then(body1 => {
 
       // We want to get: Moive id, description from IMDb, and images.
@@ -33,8 +34,9 @@ const movieInfo = function(input) {
       const plot = response2['plot'];
 
       movieArr.push(plot);
+      movieArr.push(typeID);
 
-      console.log(movieArr);
+      // console.log(movieArr);
       return movieArr;
     })
     .catch(err => {
@@ -42,4 +44,4 @@ const movieInfo = function(input) {
     });
 };
 
-movieInfo(process.argv[2]);
+module.exports = movieInfo;

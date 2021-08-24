@@ -2,6 +2,10 @@ $(() => {
   const appendListElements = () => {
     $.get('/reminders')
       .then((data) => {
+        $('.movies').empty();
+        $('.books').empty();
+        $('.foods').empty();
+        $('.products').empty();
         for (const item of data['reminders']) {
           switch(item['type_id']) {
             case 1:
@@ -21,14 +25,16 @@ $(() => {
       })
       .catch((err) => {
         console.log('error message: ', err)
-      })
+      });
   };
 
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
-    let $userSubmission = $('.list-input-field').val();
+    const $userSubmission = $(this).serialize();
+    console.log($userSubmission);
 
-    $.post('/reminders', $userSubmission, appendListElements())
+    $.post('/reminders', $userSubmission)
+      .then(appendListElements)
   })
   appendListElements();
 });
