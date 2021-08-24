@@ -15,7 +15,6 @@ module.exports = (db) => {
     FROM reminders
     WHERE user_id = $1
     `;
-    console.log(query);
     db.query(query, [req.session.userID])
       .then(data => {
         const reminders = data.rows;
@@ -27,5 +26,9 @@ module.exports = (db) => {
           .json({ error: err.message });
       });
   });
+
+  router.post("/", (req, res) => {
+    console.log(req.body)
+  })
   return router;
 };
