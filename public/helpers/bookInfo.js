@@ -2,10 +2,11 @@ const request = require('request-promise-native');
 
 const bookInfo = function(input) {
 
+  const typeID = 2;
   bookArr = [];
 
   query = 'https://www.googleapis.com/books/v1/volumes?q='
-  request(query + input)
+  return request(query + input)
     .then(body => {
 
       const response = JSON.parse(body);
@@ -16,7 +17,7 @@ const bookInfo = function(input) {
       const description = item['description'];
       const infoLink = item['infoLink'];
 
-      bookArr.push(input, image, infoLink, description);
+      bookArr.push(input, image, infoLink, description, typeID);
       console.log(bookArr);
       return bookArr;
     })
@@ -26,4 +27,4 @@ const bookInfo = function(input) {
 };
 
 
-bookInfo(process.argv[2]);
+module.exports = bookInfo;

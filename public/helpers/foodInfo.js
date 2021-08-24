@@ -2,10 +2,11 @@ const request = require('request-promise-native');
 
 const foodInfo = function(input) {
 
+  const typeID = 3;
   const foodArr = [];
 
   query = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=4523f0dd2bf7428899992a676ad63136&query=';
-  request(query + input)
+  return request(query + input)
     .then(body1 => {
 
       // Similar to movies, this request only gives us id and image of the recipe.
@@ -31,6 +32,7 @@ const foodInfo = function(input) {
       const foodLink = response2['sourceUrl'];
 
       foodArr.push(foodLink, detail);
+      foodArr.push(typeID);
       console.log(foodArr);
       return foodArr;
     })
@@ -39,4 +41,4 @@ const foodInfo = function(input) {
     });
 };
 
-foodInfo(process.argv[2]);
+module.exports = foodInfo;
