@@ -9,16 +9,16 @@ $(() => {
         for (const item of data['reminders']) {
           switch(item['type_id']) {
             case 1:
-              $('.movies').append(`<li>${item.name}</li>`);
+              $('.movies').append(`<li class=reminder-${item.id}>${item.name}</li>`);
               break;
             case 2:
-              $('.books').append(`<li>${item.name}</li>`);
+              $('.books').append(`<li class=reminder-${item.id}>${item.name}</li>`);
               break;
             case 3:
-              $('.foods').append(`<li>${item.name}</li>`);
+              $('.foods').append(`<li class=reminder-${item.id}>${item.name}</li>`);
               break;
             case 4:
-              $('.products').append(`<li>${item.name}</li>`);
+              $('.products').append(`<li class=reminder-${item.id}>${item.name}</li>`);
               break;
           }
         }
