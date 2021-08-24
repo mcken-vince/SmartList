@@ -1,8 +1,13 @@
 body {
-  background-color: #00101C;
+  background-color: #EEE;
 }
 
 body h1 {
   color: #EEE;
+}
+
+.lists {
+  float: left;
+  width: 25%;
 }
 /*# sourceMappingURL=layout.css.map */
