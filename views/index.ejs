@@ -8,10 +8,11 @@
     <!-- Local SCSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -21,34 +22,37 @@
     <nav>
       <span>Smart TODO List</span>
       <% if (!username) { %>
-        <form action="/login" method="POST">
+        <form class="nav-top-right" action="/login" method="POST">
           <div class="form-group">
             <label for="username">Username:</label>
-            <input type="text" name="username" placeholder="Enter Username" style="width: 300px">
+            <input type="text" name="username" placeholder="Enter Username">
           </div>
           <button type="submit">Login</button>
         </form>
         <% } else { %>
-          <div>My name Jeff *hackernoises* <%= username %></div>
-          <form action="/logout" method="POST">
-            <button type="submit">Logout</button>
-          </form>
+          <div class="nav-top-right">
+            <div>My name Jeff *hackernoises* <%= username %></div>
+            <form action="/logout" method="POST">
+              <button type="submit">Logout</button>
+            </form>
+          </div>
         <% } %>
     </nav>
-    <div class="curve"></div>
+    <header>
 
+    </header>
     <% if (username) { %>
       <form id="new-item" action='/reminders' method="POST">
-        <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted" style="width: 300px">
+        <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
         <button class="new-item" type="submit">Submit</button>
       </form>
-        <div>
-          <ul class="movies lists"></ul>
-          <ul class="foods lists"></ul>
-          <ul class="books lists"></ul>
-          <ul class="products lists"></ul>
-        </div>
-      <% } %>
+      <div>
+        <ul class="movies lists"></ul>
+        <ul class="foods lists"></ul>
+        <ul class="books lists"></ul>
+        <ul class="products lists"></ul>
+      </div>
+    <% } %>
 
   </body>
 </html>

@@ -1,37 +1,37 @@
-nav {
+@import 'variables';
 
-  position:relative;
+nav {
+  position: sticky;
   display:flex;
-  flex-direction:column;
+  width: 100vw;
+  justify-content: space-between;
   align-items: center;
-  min-height:150px;
-  padding: 20px 20vw;
-  background-color: #EEE;
+  height:150px;
+  background-color: $color-1;
 
   span {
-    font-family: 'Rampart One', cursive;
-    color:#00101C;
-    font-size: 50px;
-
+    font-family: $font-title;
+    color:$color-4;
+    font-size: 35px;
+    padding-left: 2vw;
   }
 
+  .nav-top-right {
+    padding-right: 2vw;
+  }
+
+  .form-group {
+
+    input {
+      border:none;
+      background-color: transparent;
+      border-bottom: 2px solid black;
+      width: 17vw;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
 
-.curve {
-  position:relative;
-  height: 100px;
-  width: 100%;
-}
-
-.curve::after {
-  content: '';
-  position: absoulte;
-  display:block;
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  bottom:0;
-  height: 85%;
-  width: 100%;
-  background-color:#F7760E;
-  z-index: -1;
-}

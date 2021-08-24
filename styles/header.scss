@@ -1,0 +1,9 @@
+@import 'variables';
+
+header {
+  height: 250px;
+  width:100vw;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  background-color: $color-4;
+  z-index: 1000;
+}
