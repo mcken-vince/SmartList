@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/content.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/loader.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/modal.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +47,12 @@
     <% if (username) { %>
       <header class="header-toggle">
         <h2>Why can you drink the drink but can't food the food?</h2>
+        <div class="loader">
+          <div class="loader-box loader-movies"></div>
+          <div class="loader-box loader-foods"></div>
+          <div class="loader-box loader-books"></div>
+          <div class="loader-box loader-products"></div>
+        </div>
         <form id="new-item" action='/reminders' method="POST">
           <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
           <button class="new-item" type="submit">Sort it!</button>
@@ -56,6 +64,12 @@
           </div>
         </form>
       </header>
+
+      <div class="modal-container">
+        <p class="modal-description"></p>
+        <img class="modal-image" src="https://images.pexels.com/photos/3310691/pexels-photo-3310691.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-3310691.jpg&fm=jpg" alt="">
+      </div>
+
       <div class="list-container">
         <div class="movies-container">
           <h3>Movies</h3>

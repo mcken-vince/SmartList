@@ -82,5 +82,16 @@ module.exports = (db) => {
     })
 
 
+    router.get("/:id", (req, res) => {
+      console.log(req.params.id);
+      let query = `SELECT * FROM reminders WHERE id = $1`;
+      db.query(query, [req.params.id])
+        .then((results) => {
+          return res.status(200).send({
+            results: results.rows[0]
+          })
+        })
+    })
+
   return router;
 }

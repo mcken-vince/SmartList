@@ -9,21 +9,21 @@
   }
 
   .movies-container {
-    background: rgb(0,114,189);
+    background: $movies-color;
   }
 
   .foods-container {
-    background: rgb(217, 83, 25);
+    background: $foods-color;
   }
-  
+
   .books-container {
-    background: rgb(0, 127, 0);
+    background: $books-color;
   }
-  
+
   .products-container {
-    background: rgb(237, 177, 32);
+    background: $products-color;
   }
-  
+
   div {
     width: 25%;
     border: 2px solid rgba($color: $color-5, $alpha: 0.7);
