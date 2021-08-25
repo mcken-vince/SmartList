@@ -21,6 +21,11 @@ module.exports = (db) => {
         });
       // res.json({ success: true });
     })
+    .catch((err) => {
+      return res.status(404).send({
+        message: 'search failed',
+      })
+    })
   })
 
   return router

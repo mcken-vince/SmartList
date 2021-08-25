@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/content.css" type="text/css" />
     <link rel="stylesheet" href="/styles/loader.css" type="text/css" />
     <link rel="stylesheet" href="/styles/modal.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/queries.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +56,7 @@
         </div>
         <form id="new-item" action='/reminders' method="POST">
           <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
-          <button class="new-item" type="submit">Sort it!</button>
+          <button class="custom-btn btn-12"><span>Do it!</span><span>Sort</span></button>
           <div class="font-awesome-icons">
             <i class="fas fa-film"></i>
             <i class="fas fa-utensils"></i>
@@ -65,25 +66,20 @@
         </form>
       </header>
 
-      <div class="modal-container">
-        <p class="modal-description"></p>
-        <img class="modal-image" src="https://images.pexels.com/photos/3310691/pexels-photo-3310691.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-3310691.jpg&fm=jpg" alt="">
-      </div>
-
       <div class="list-container">
-        <div class="movies-container">
+        <div class="movies-container dumbledore">
           <h3>Movies</h3>
           <ul class="movies lists"></ul>
         </div>
-        <div class="foods-container">
+        <div class="foods-container dumbledore">
           <h3>Foods</h3>
           <ul class="foods lists"></ul>
         </div>
-        <div class="books-container">
+        <div class="books-container dumbledore">
           <h3>Books</h3>
           <ul class="books lists"></ul>
         </div>
-        <div class="products-container">
+        <div class="products-container dumbledore">
           <h3>Products</h3>
           <ul class="products lists"></ul>
         </div>
@@ -91,4 +87,17 @@
     <% } %>
 
   </body>
+
+  <div class="modal-container">
+    <div class="modal-box">
+      <div class="title-container">
+        <h2 class="modal-title">Fake Title</h2>
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="modal-content-container">
+        <img class="modal-image" src="https://images.pexels.com/photos/3310691/pexels-photo-3310691.jpeg?cs=srgb&dl=pexels-aleksandar-pasaric-3310691.jpg&fm=jpg" alt="">
+        <p class="modal-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas quidem commodi laborum reiciendis! Quasi itaque dicta ex asperiores sed fuga, est totam deleniti voluptas repellat voluptatum maiores libero sint explicabo, amet possimus accusamus reprehenderit eum, voluptatem consequuntur. Inventore corrupti magnam explicabo soluta sed, porro quibusdam eum! Totam laborum accusamus ducimus quam error eius laudantium eos quos, id earum. Optio possimus harum animi eos hic ab officiis architecto, cupiditate earum commodi dolores praesentium consequuntur non corrupti, dolorem blanditiis veniam saepe necessitatibus ipsam distinctio consequatur modi! Ipsam veniam impedit perspiciatis iste necessitatibus libero voluptatibus esse soluta placeat pariatur, qui optio id! Nisi?</p>
+      </div>
+    </div>
+  </div>
 </html>
