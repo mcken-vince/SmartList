@@ -57,7 +57,6 @@ $(() => {
         $('.loader').css('display','none');
         $('.list-input-field').val('');
       })
-
   });
 
   appendListElements();
