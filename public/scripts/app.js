@@ -43,12 +43,23 @@ $(() => {
 
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
+    $(this).css('display', 'none');
+    $('.loader').css('display','flex');
+
 
     const $userSubmission = $(this).serialize();
     console.log($userSubmission);
 
     $.post($(this).attr('action'), $userSubmission)
       .then(appendListElements)
+      .then((response) => {
+        $(this).css('display', 'block');
+        $('.loader').css('display','none');
+        $('.list-input-field').val('');
+      })
+
   });
+
   appendListElements();
+
 });
