@@ -1,0 +1,48 @@
+@import 'variables';
+
+
+.loader {
+
+  display:none;
+  flex-wrap:wrap;
+  width:40px;
+  height:40px;
+  animation: spin 1.5s linear infinite;
+
+
+  .loader-box {
+    width:50%;
+    height:50%;
+  }
+
+  .loader-movies {
+    background: $movies-color;
+    border-radius: 15px 15px 15px 0px;
+  }
+
+  .loader-foods {
+    background: $foods-color;
+    border-radius: 0px 15px 15px 15px;
+  }
+
+  .loader-books {
+    background: $books-color;
+    border-radius: 15px 15px 0px 15px;
+  }
+
+  .loader-products {
+    background: $products-color;
+    border-radius: 15px 0px 15px 15px;
+  }
+
+
+}
+
+
+@keyframes spin{
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+
+}

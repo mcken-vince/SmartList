@@ -43,6 +43,7 @@ $(() => {
 
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
+
     const $userSubmission = $(this).serialize();
     console.log($userSubmission);
 
