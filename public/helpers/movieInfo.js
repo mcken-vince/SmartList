@@ -5,7 +5,7 @@ const movieInfo = function(input) {
   const typeID = 1;
   const movieArr = [];
 
-  query = 'https://imdb-api.com/en/API/SearchMovie/k_sm621mte/'
+  query = `https://imdb-api.com/en/API/SearchMovie/${process.env.MOVIES_API_KEY}/`
   return request(query + input)
     .then(body1 => {
 
@@ -24,7 +24,7 @@ const movieInfo = function(input) {
       movieArr.push(input, imageLink, fullLink);
 
       // Using the id we just obtained, make another request to get description.
-      const descriptionQuery = 'https://imdb-api.com/en/API/Title/k_sm621mte/';
+      const descriptionQuery = `https://imdb-api.com/en/API/Title/${process.env.MOVIES_API_KEY}/`;
       return request(descriptionQuery + id);
     })
     .then(body2 => {
