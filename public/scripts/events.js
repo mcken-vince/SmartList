@@ -39,4 +39,8 @@ $(()=> {
     }
     console.log($('#new-item').attr('action'))
   });
+
+  $(".fa-times").on("click", () => {
+    $('.modal-container').css('display', 'none')
+  });
 })

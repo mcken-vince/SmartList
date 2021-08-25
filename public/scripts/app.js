@@ -31,10 +31,10 @@ $(() => {
 
 
   const showModal = (data) => {
-
+    $('.modal-title').html(`${data.name}`);
     $('.modal-description').html(`${data.description}`);
     $('.modal-image').attr('src', data.image_link);
-
+    $('.modal-container').css('display', 'flex');
   };
 
 
