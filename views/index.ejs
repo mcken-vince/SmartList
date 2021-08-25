@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/content.css" type="text/css" />
     <link rel="stylesheet" href="/styles/loader.css" type="text/css" />
     <link rel="stylesheet" href="/styles/modal.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/queries.css" type="text/css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +56,7 @@
         </div>
         <form id="new-item" action='/reminders' method="POST">
           <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
-          <button class="new-item" type="submit">Sort it!</button>
+          <button class="custom-btn btn-12"><span>Do it!</span><span>Sort</span></button>
           <div class="font-awesome-icons">
             <i class="fas fa-film"></i>
             <i class="fas fa-utensils"></i>
@@ -66,19 +67,19 @@
       </header>
 
       <div class="list-container">
-        <div class="movies-container">
+        <div class="movies-container dumbledore">
           <h3>Movies</h3>
           <ul class="movies lists"></ul>
         </div>
-        <div class="foods-container">
+        <div class="foods-container dumbledore">
           <h3>Foods</h3>
           <ul class="foods lists"></ul>
         </div>
-        <div class="books-container">
+        <div class="books-container dumbledore">
           <h3>Books</h3>
           <ul class="books lists"></ul>
         </div>
-        <div class="products-container">
+        <div class="products-container dumbledore">
           <h3>Products</h3>
           <ul class="products lists"></ul>
         </div>

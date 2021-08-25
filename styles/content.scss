@@ -2,7 +2,8 @@
 
 .list-container {
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: center;
   h3 {
     text-align: center;
     color: white;
@@ -25,17 +26,14 @@
   }
 
   div {
-    width: 25%;
+    width: 22%;
     border: 2px solid rgba($color: $color-5, $alpha: 0.7);
     margin: 10px;
     box-shadow: 3px 3px rgba($color: $color-3, $alpha: 0.25);
 
-
-
     ul {
       padding:10px;
     }
-
 
     li {
       padding: 5px 10px;
@@ -46,6 +44,7 @@
       color: white;
       justify-content: space-between;
       transition: 0.3s;
+
       i {
         color: rgba($color: $color-5, $alpha: 1);
         &:hover {

@@ -63,8 +63,14 @@ module.exports = (db) => {
               message: 'data inserted',
               result: results.rows
             })
-          });
+          })
+          
         // res.json({ success: true });
+      })
+      .catch((err) => {
+        return res.status(404).send({
+          message: 'search failed',
+        })
       })
     })
 
@@ -77,8 +83,7 @@ module.exports = (db) => {
             message: 'reminder deleted',
             result: results
           })
-        });
-
+        })
     })
 
 
