@@ -5,7 +5,7 @@ const foodInfo = function(input) {
   const typeID = 3;
   const foodArr = [];
 
-  query = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=4523f0dd2bf7428899992a676ad63136&query=';
+  query = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.FOODS_API_KEY}&query=`;
   return request(query + input)
     .then(body1 => {
 
@@ -22,7 +22,7 @@ const foodInfo = function(input) {
       foodArr.push(input, recipePic);
 
       const descriptionQuery = 'https://api.spoonacular.com/recipes/' + id.toString();
-      const access = '/information?apiKey=4523f0dd2bf7428899992a676ad63136';
+      const access = `/information?apiKey=${process.env.FOODS_API_KEY}`;
       return request(descriptionQuery + access);
     })
     .then(body2 => {
