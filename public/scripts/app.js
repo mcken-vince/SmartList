@@ -29,7 +29,18 @@ $(() => {
       });
   };
 
-  $("ul").on("click",'.fa-trash', function() {
+
+  const showModal = (data) => {
+
+    $('.modal-description').html(`${data.description}`);
+    $('.modal-image').attr('src', data.image_link);
+
+  };
+
+
+  $("ul").on("click",'.fa-trash', function(event) {
+    // stopPropagation prevents 'li' click event listener from firing
+    event.stopPropagation();
     const id = $(this).parent().attr("class").split("-")[1];
 
     $.ajax({
@@ -50,6 +61,7 @@ $(() => {
       type: 'GET',
       success: (response) => {
         console.log(response.results);
+        showModal(response.results);
       }
     });
 
