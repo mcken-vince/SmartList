@@ -29,7 +29,7 @@ header {
       background: transparent;
     }
   }
-  
+
   .font-awesome-icons {
     text-align: center;
     color: white;
@@ -58,7 +58,7 @@ header {
   perspective: 230px;
 }
 .btn-12 span {
-  background: rgb(0,172,238);
+  // background: rgb(0,172,238);
   background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   display: block;
   position: absolute;
@@ -77,11 +77,11 @@ header {
   transition: all .3s;
 }
 .btn-12 span:nth-child(1) {
-  box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
+  // box-shadow:
+  //  -7px -7px 25px 0px #fff9,
+  //  -4px -4px 5px 0px #fff9,
+  //  7px 7px 20px 0px #0002,
+  //  4px 4px 5px 0px #0001;
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);
