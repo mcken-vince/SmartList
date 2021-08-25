@@ -14,9 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/events.js"></script>
   </head>
 
   <body>
@@ -32,7 +35,7 @@
         </form>
         <% } else { %>
           <div class="nav-top-right">
-            <div>My name Jeff *hackernoises* <%= username %></div>
+            <div>Welcome <%= username %></div>
             <form action="/logout" method="POST">
               <button class='identify' type="submit">Logout</button>
             </form>
@@ -44,23 +47,29 @@
         <h2>Why can you drink the drink but can't food the food?</h2>
         <form id="new-item" action='/reminders' method="POST">
           <input class="list-input-field" type="text" name="reminder" placeholder="To be sorted">
-          <button class="new-item" type="submit">Submit</button>
+          <button class="new-item" type="submit">Sort it!</button>
+          <div class="font-awesome-icons">
+            <i class="fas fa-film"></i>
+            <i class="fas fa-utensils"></i>
+            <i class="fas fa-solid fa-book"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
         </form>
       </header>
       <div class="list-container">
-        <div>
+        <div class="movies-container">
           <h3>Movies</h3>
           <ul class="movies lists"></ul>
         </div>
-        <div>
+        <div class="foods-container">
           <h3>Foods</h3>
           <ul class="foods lists"></ul>
         </div>
-        <div>
+        <div class="books-container">
           <h3>Books</h3>
           <ul class="books lists"></ul>
         </div>
-        <div>
+        <div class="products-container">
           <h3>Products</h3>
           <ul class="products lists"></ul>
         </div>

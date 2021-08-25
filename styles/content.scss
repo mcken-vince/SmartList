@@ -5,13 +5,32 @@
 
   h3 {
     text-align: center;
+    color: white;
   }
 
+  .movies-container {
+    background: rgb(0,114,189);
+  }
+
+  .foods-container {
+    background: rgb(217, 83, 25);
+  }
+  
+  .books-container {
+    background: rgb(0, 127, 0);
+  }
+  
+  .products-container {
+    background: rgb(237, 177, 32);
+  }
+  
   div {
     width: 25%;
-    border: 2px solid rgba($color: $color-4, $alpha: 0.7);
+    border: 2px solid rgba($color: $color-5, $alpha: 0.7);
     margin: 10px;
-    box-shadow: 3px 3px rgba($color: $color-4, $alpha: 0.25);
+    box-shadow: 3px 3px rgba($color: $color-3, $alpha: 0.25);
+
+
 
     ul {
       padding:10px;
@@ -19,7 +38,24 @@
 
 
     li {
+      padding: 5px 10px;
+      margin: 5px 0px;
+      border: 2px solid rgba($color: $color-5, $alpha: 0.7);
       list-style:none;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      transition: 0.3s;
+      i {
+        color: rgba($color: $color-5, $alpha: 1);
+        &:hover {
+          color: rgba($color: $color-3, $alpha: 1);
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        transform: translateY(-3px) translateX(-3px);
+      }
     }
   }
 }

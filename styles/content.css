@@ -1,0 +1,26 @@
+.list-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-container h3 {
+  text-align: center;
+}
+
+.list-container div {
+  width: 25%;
+  border: 2px solid rgba(52, 160, 164, 0.7);
+  margin: 10px;
+  -webkit-box-shadow: 3px 3px rgba(52, 160, 164, 0.25);
+          box-shadow: 3px 3px rgba(52, 160, 164, 0.25);
+}
+
+.list-container div ul {
+  padding: 10px;
+}
+
+.list-container div li {
+  list-style: none;
+}
+/*# sourceMappingURL=content.css.map */

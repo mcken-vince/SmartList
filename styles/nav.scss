@@ -18,6 +18,12 @@ nav {
 
   .nav-top-right {
     padding-right: 2vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    div {
+      padding: 0px 10px;
+    }
   }
 
   .form-group {
@@ -48,8 +54,5 @@ nav {
       cursor:pointer;
     }
   }
-
-
-
 }
 

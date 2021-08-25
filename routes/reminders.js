@@ -65,8 +65,22 @@ module.exports = (db) => {
             })
           });
         // res.json({ success: true });
+      })
     })
 
-  })
+    router.delete("/:id", (req,res) => {
+      let query = `DELETE FROM reminders WHERE id = $1`;
+      console.log(req.params.id)
+      db.query(query, [req.params.id])
+        .then((results) => {
+          return res.status(200).send({
+            message: 'reminder deleted',
+            result: results
+          })
+        });
+
+    })
+
+
   return router;
 }
