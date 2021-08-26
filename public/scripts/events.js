@@ -53,16 +53,6 @@ $(()=> {
       $allContainers.css('display', 'block');
       $container.removeClass('select-list');
     } else {
-      const category = $container.attr('class').split('-')[0];
-      console.log(`GET /${category}`)
-      $.ajax({
-        url: `/${category}`,
-        type: 'GET',
-        success: (reminders) => {
-         console.log("reminders: ", reminders);
-        }
-      });
-
       $allContainers.css('display', 'none');
       $container.css('display', 'block');
       $container.addClass('select-list');
