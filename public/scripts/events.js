@@ -47,16 +47,24 @@ $(()=> {
   // enlarge individual list and hide others on click
   $(".dumbledore h3").on("click", (event) => {
     const $allContainers = $('.dumbledore');
-    console.log($allContainers);
+    const $container = $(event.target).parent();
 
-    const $container = $(event.target).parent()
     if ($container.hasClass('select-list')) {
       $allContainers.css('display', 'block');
       $container.removeClass('select-list');
     } else {
+      const category = $container.attr('class').split('-')[0];
+      $.ajax({
+        url: `/${category}`,
+        type: 'GET',
+        success: () => {
+          appendListElements();
+        }
+      });
+
       $allContainers.css('display', 'none');
       $container.css('display', 'block');
       $container.addClass('select-list');
     }
-  })
+  });
 })
