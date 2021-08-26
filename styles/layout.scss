@@ -2,12 +2,12 @@
 @import 'variables';
 
 body {
-  background-color: #f4f4f4;
+  background-color: $color-0;
   font-family:$font-main;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 
   h1 {
-    color: #EEE;
+    color: $color-0;
   }
 }
 

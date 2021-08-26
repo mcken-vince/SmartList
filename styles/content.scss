@@ -6,8 +6,8 @@
   justify-content: center;
   h3 {
     text-align: center;
-    color: white;
-    border: 2px solid white;
+    color: $color-5;
+    border: 2px solid $color-5;
     padding: 20px 0px;
     margin: 0px;
 
@@ -59,10 +59,10 @@
     li {
       padding: 5px 10px;
       margin: 5px 0px;
-      border: 2px solid rgba($color: $color-5, $alpha: 0.7);
+      border: 2px solid rgba($color: $color-0, $alpha: 0.7);
       list-style:none;
       display: flex;
-      color: white;
+      color: $color-0;
       justify-content: space-between;
       transition: 0.3s;
 

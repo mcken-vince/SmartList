@@ -3,27 +3,26 @@
 header {
   height: 250px;
   width:100vw;
-  background-image: url('https://i.imgur.com/LLoz1n1.gif');
+  background-image: url('https://i.imgur.com/xoki6UT.gif');
   // background: url('https://gfycat.com/candidhappyblackbuck.gif');
   background-color: $color-5;
-  background-repeat:repeat-x;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   h2 {
-    color: $color-2;
-    border:2px solid $color-2;
+    color: $color-0;
+    border:2px solid $color-0;
     padding: 15px;
   }
 
   input {
     margin: 0px 20px;
     border: none;
-    border-bottom: 2px solid $color-2;
+    border-bottom: 2px solid $color-0;
     background: transparent;
-    color: white;
+    color: $color-0;
     &:focus {
       outline: none;
       background: transparent;
@@ -41,7 +40,8 @@ header {
 
   .font-awesome-icons {
     text-align: center;
-    color: white;
+    color: $color-0;
+    padding-right:100px;
 
     .fas {
       transition:0.3s;
