@@ -1,4 +1,8 @@
+@import 'variables';
+
 .modal-container {
+
+
     position: fixed;
     top: 0;
     width: 100vw;
@@ -26,6 +30,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            a {
+                font-family: $font-title;
+                font-size:25px;
+                color: $color-4;
+                transition:0.3s;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-3;
+                }
+
+            }
         }
     }
     img {
