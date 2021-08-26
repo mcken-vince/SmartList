@@ -13,14 +13,12 @@ const productInfo = function(input) {
 
       const imageLink = item['thumbnail'];
       const description = item['description'];
-      const productLink = response['walmart_url'];
-
+      const productLink = item['product_page_url'];
       productArr.push(input, imageLink, productLink, description, typeID);
-      console.log(productArr);
 
       return productArr;
     })
-    .catch((err) => console.log(err));
+    .catch((err) => (err));
 };
 
 module.exports = productInfo;
