@@ -54,6 +54,11 @@ header {
 }
 
 
+div.below-header {
+  margin: 0;
+  height: 30px;
+  background-image: linear-gradient($color-5 , #b4b4b4);
+}
 
 /* 12 */
 .btn-12{
@@ -69,9 +74,12 @@ header {
   -webkit-perspective: 230px;
   perspective: 230px;
 }
+
+
 .btn-12 span {
   background: rgb(0,172,238);
-  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  background: rgb(239, 71, 111);
+  background: linear-gradient(0deg, rgba(239, 71, 111,1) 0%, rgba(239, 71, 111,1) 100%);
   display: block;
   position: absolute;
   width: 100px;

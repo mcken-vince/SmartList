@@ -8,10 +8,12 @@
     align-items: center;
     background: rgba($color: #000000, $alpha: 0.4);
     .modal-box {
-        border: 1px solid rgba(50, 50, 50, 1.0);
+        border: 3px solid rgba(50, 50, 50, 1.0);
         width: 70vw;
         padding: 15px 30px;
-        background: white;
+        background: #f4f4f4;
+        border-radius:15px;
+        background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
         i {
             &:hover {
                 transition: 0.3s;

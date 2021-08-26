@@ -7,26 +7,43 @@
   h3 {
     text-align: center;
     color: white;
-    background-color: black;
     border: 2px solid white;
     padding: 20px 0px;
     margin: 0px;
+
+    &.movies-top {
+      background-color: $movies-color;
+    }
+
+    &.foods-top {
+      background-color: $foods-color;
+    }
+
+    &.books-top {
+      background-color: $books-color;
+    }
+
+    &.products-top {
+      background-color: $products-color;
+    }
+
+
   }
 
   .movies-container {
-    background: $movies-color;
+    background: $color-5;
   }
 
   .foods-container {
-    background: $foods-color;
+    background: $color-5;
   }
 
   .books-container {
-    background: $books-color;
+    background: $color-5;
   }
 
   .products-container {
-    background: $products-color;
+    background: $color-5;
   }
 
   div {
@@ -50,7 +67,8 @@
       transition: 0.3s;
 
       i {
-        color: rgba($color: $color-5, $alpha: 1);
+        color: rgba($color: $color-1, $alpha: 1);
+        transition:0.3s;
         &:hover {
           color: rgba($color: $color-3, $alpha: 1);
           cursor: pointer;
