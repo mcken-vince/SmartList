@@ -1,15 +1,15 @@
-$color-1: #89ca50;
-$color-2: #76C893;
-$color-3: #34A0A4;
-$color-4: #1A759F;
-$color-5: #184E77;
+$color-1: #619B8A;
+$color-2: #A1C181;
+$color-3: #FCCA46;
+$color-4: #FE7F2D;
+$color-5: #233D4D;
 
 $font-main: 'Raleway', sans-serif;
 $font-title: 'Bebas Neue', cursive;
 
-$movies-color: rgb(0,114,189);
-$foods-color: rgb(217, 83, 25);
-$books-color: rgb(0, 127, 0);
-$products-color: rgb(237, 177, 32);
+$movies-color: $color-1;
+$foods-color: $color-2;
+$books-color: $color-3;
+$products-color: $color-4;
 
 $header-background: url("./media/polygrid.svg");
