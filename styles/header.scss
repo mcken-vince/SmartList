@@ -30,6 +30,15 @@ header {
     }
   }
 
+  @mixin toggle() {
+    color: $color-2;
+    cursor: pointer;
+    font-size:30px;
+  }
+  .fas-clicked {
+    @include toggle;
+  }
+
   .font-awesome-icons {
     text-align: center;
     color: white;
@@ -38,19 +47,13 @@ header {
       transition:0.3s;
       padding: 8px 10px 2px 10px;
       &:hover {
-        color: $color-2;
-        cursor: pointer;
-        font-size:30px;
+        @include toggle;
       }
     }
   }
 }
 
-.fas-clicked {
-  color: $color-2;
-  cursor: pointer;
-  font-size:30px;
-}
+
 
 /* 12 */
 .btn-12{
