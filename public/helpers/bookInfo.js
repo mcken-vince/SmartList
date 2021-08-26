@@ -18,7 +18,6 @@ const bookInfo = function(input) {
       const infoLink = item['infoLink'];
 
       bookArr.push(input, image, infoLink, description, typeID);
-      console.log(bookArr);
       return bookArr;
     })
     .catch(err => {

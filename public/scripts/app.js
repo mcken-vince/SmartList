@@ -14,7 +14,7 @@ $(() => {
             </div>
             <div class='reminder-footer'>
               <img src=${item.image_link} class="reminder-footer-image">
-              <p>${item.time}</p>
+              <p>${item.time.slice(0, 10)}</p>
             </div>
           </li>
           `;
