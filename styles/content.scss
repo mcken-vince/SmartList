@@ -47,7 +47,7 @@
     background: $color-5;
   }
 
-  div {
+  .dumbledore {
     width: 22%;
     border: 2px solid rgba($color: $color-5, $alpha: 0.7);
     margin: 10px;
@@ -62,20 +62,17 @@
       margin: 5px 0px;
       border: 2px solid rgba($color: $color-0, $alpha: 0.7);
       list-style:none;
-      display: flex;
       color: $color-0;
-      justify-content: space-between;
       transition: 0.3s;
-
       &:hover {
         cursor: pointer;
       }
 
       i {
-        color: rgba($color: $color-1, $alpha: 1);
+        color: rgba($color: $color-0, $alpha: 1);
         transition:0.3s;
         &:hover {
-          color: rgba($color: white, $alpha: 1);
+          color: rgba($color: $color-3, $alpha: 1);
           cursor: pointer;
         }
       }
@@ -84,9 +81,36 @@
       }
     }
   }
+  .reminder-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reminder-footer {
+    display: none;
+  }
 
   .select-list {
-    width: 85%;
+    width: 60%;
 
+    li {
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    }
+
+
+    .reminder-header {
+      padding: 15px;
+      font-size: 25px;
+    }
+
+    .reminder-footer {
+      justify-content: space-between;
+      align-items: baseline;
+
+      .reminder-footer-image {
+        width:75px;
+        margin-left: 15px;
+      }
+    }
   }
 }

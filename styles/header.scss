@@ -3,7 +3,7 @@
 header {
   height: 250px;
   width:100vw;
-  background-image: url('https://i.imgur.com/xoki6UT.gif');
+  background-image: $header-background-image;
   // background: url('https://gfycat.com/candidhappyblackbuck.gif');
   background-color: $color-5;
   display:flex;
@@ -53,7 +53,6 @@ header {
   }
 }
 
-
 div.below-header {
   margin: 0;
   height: 30px;
@@ -77,9 +76,7 @@ div.below-header {
 
 
 .btn-12 span {
-  background: rgb(0,172,238);
-  background: rgb(221,114,48);
-  background: linear-gradient(0deg, rgba(221,114,48,1) 0%, rgba(221,114,48,1) 100%);
+  background: linear-gradient(0deg, $color-3 0%, $color-2 100%);
   display: block;
   position: absolute;
   width: 100px;

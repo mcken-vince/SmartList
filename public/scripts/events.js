@@ -100,15 +100,19 @@ $(()=> {
   $(".dumbledore h3").on("click", (event) => {
     const $allContainers = $('.dumbledore');
     const $container = $(event.target).parent();
+    const $reminderFooter = $('.reminder-footer');
 
     if ($container.hasClass('select-list')) {
       $allContainers.css('display', 'block');
       $container.removeClass('select-list');
+      $reminderFooter.css('display', 'none');
     } else {
       $allContainers.css('display', 'none');
       $container.css('display', 'block');
       $container.addClass('select-list');
+      $reminderFooter.css('display', 'flex');
     }
+
   });
 
 

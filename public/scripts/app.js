@@ -7,7 +7,17 @@ $(() => {
         $('.foods').empty();
         $('.products').empty();
         for (const item of data['reminders']) {
-          const listElement = `<li class="reminder-${item.id}">${item.name}<i class="fas fa-solid fa-trash"></i></li>`;
+          const listElement = `
+          <li class="reminder-${item.id}">
+            <div class='reminder-header'>
+              ${item.name}<i class="fas fa-solid fa-trash"></i>
+            </div>
+            <div class='reminder-footer'>
+              <img src=${item.image_link} class="reminder-footer-image">
+              <p>${item.time}</p>
+            </div>
+          </li>
+          `;
           switch(item['type_id']) {
             case 1:
               $('.movies').append(listElement);
@@ -32,6 +42,7 @@ $(() => {
 
   const showModal = (data) => {
     $('.modal-title').html(`${data.name}`);
+    $('.modal-title').attr('href', data.url);
     $('.modal-description').html(`${data.description}`);
     $('.modal-image').attr('src', data.image_link);
     $('.modal-container').css('display', 'flex');
@@ -70,10 +81,10 @@ $(() => {
 
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
-    
+
     const $userSubmission = $(this).serialize();
     console.log($('.list-input-field').val());
-    
+
     if ($('.list-input-field').val()) {
       $(this).css('display', 'none');
       $('.loader').css('display','flex');
@@ -90,8 +101,8 @@ $(() => {
         $('.list-input-field').val('');
       })
     }
-    
-    
+
+
   });
 
   appendListElements();
