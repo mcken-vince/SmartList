@@ -3,8 +3,8 @@
 header {
   height: 250px;
   width:100vw;
-  background-image: url('https://i.imgur.com/LLoz1n1.gif');
-  // background: url('https://i.imgur.com/WI9wjwW.gif');
+  // background-image: url('https://i.imgur.com/LLoz1n1.gif');
+  background: url('https://gfycat.com/candidhappyblackbuck.gif');
   background-color: $color-5;
   background-repeat:repeat-x;
   display:flex;
@@ -29,18 +29,27 @@ header {
       background: transparent;
     }
   }
-  
+
   .font-awesome-icons {
     text-align: center;
     color: white;
+
     .fas {
+      transition:0.3s;
       padding: 8px 10px 2px 10px;
       &:hover {
         color: $color-2;
         cursor: pointer;
+        font-size:30px;
       }
     }
   }
+}
+
+.fas-clicked {
+  color: $color-2;
+  cursor: pointer;
+  font-size:30px;
 }
 
 /* 12 */
