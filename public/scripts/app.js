@@ -20,22 +20,26 @@ $(() => {
           `;
           switch(item['type_id']) {
             case 1:
-              $('.movies').append(listElement);
+              $('.movies').prepend(listElement);
               break;
             case 2:
-              $('.books').append(listElement);
+              $('.books').prepend(listElement);
               break;
             case 3:
-              $('.foods').append(listElement);
+              $('.foods').prepend(listElement);
               break;
             case 4:
-              $('.products').append(listElement);
+              $('.products').prepend(listElement);
               break;
+          }
+
+          if ($('.dumbledore').hasClass('select-list')) {
+            $('.reminder-footer').css('display', 'flex');
           }
         }
       })
       .catch((err) => {
-        console.log('error message: ', err)
+        return 'error message: ' + err;
       });
   };
 
@@ -52,8 +56,7 @@ $(() => {
   $("ul").on("click",'.fa-trash', function(event) {
     // stopPropagation prevents 'li' click event listener from firing
     event.stopPropagation();
-    const id = $(this).parent().attr("class").split("-")[1];
-
+    const id = $(this).parent().parent().attr("class").split("-")[1];
     $.ajax({
       url: `/reminders/${id}`,
       type: 'DELETE',
@@ -63,7 +66,6 @@ $(() => {
     });
   });
 
-
   $("ul").on("click",'li', function() {
     const id = $(this).attr("class").split("-")[1];
 
@@ -71,19 +73,16 @@ $(() => {
       url: `/reminders/${id}`,
       type: 'GET',
       success: (response) => {
-        console.log(response.results);
         showModal(response.results);
       }
     });
 
   });
 
-
   $('#new-item').on('submit', function(event) {
     event.preventDefault();
 
     const $userSubmission = $(this).serialize();
-    console.log($('.list-input-field').val());
 
     if ($('.list-input-field').val()) {
       $(this).css('display', 'none');
@@ -101,8 +100,6 @@ $(() => {
         $('.list-input-field').val('');
       })
     }
-
-
   });
 
   appendListElements();

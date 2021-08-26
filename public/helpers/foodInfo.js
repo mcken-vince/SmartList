@@ -33,11 +33,10 @@ const foodInfo = function(input) {
 
       foodArr.push(foodLink, detail);
       foodArr.push(typeID);
-      console.log(foodArr);
       return foodArr;
     })
     .catch(err => {
-      console.log(err)
+      return (err);
     });
 };
 

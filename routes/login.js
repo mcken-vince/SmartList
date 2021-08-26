@@ -25,7 +25,7 @@ module.exports = (db) => {
         res.redirect('/');
       })
       .catch(err => {
-        console.log(err);
+        return (err);
 
       })
 

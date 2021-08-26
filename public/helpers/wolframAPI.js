@@ -20,11 +20,10 @@ const typeResponse = function(input) {
 
       // The domain tells us what the input was:
       // movies, foods, books, or otherwise.
-      console.log([type, altType]);
       return [type, altType];
     })
     .catch(err => {
-      console.log(err)
+      return (err);
     });
 };
 

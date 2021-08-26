@@ -36,11 +36,10 @@ const movieInfo = function(input) {
       movieArr.push(plot);
       movieArr.push(typeID);
 
-      // console.log(movieArr);
       return movieArr;
     })
     .catch(err => {
-      console.log(err)
+      return (err);
     });
 };
 

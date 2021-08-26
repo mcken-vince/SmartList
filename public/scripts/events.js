@@ -48,7 +48,7 @@ $(()=> {
         $('#new-item').attr('action', '/reminders');
         clickReset();
     }
-    console.log($('#new-item').attr('action'));
+    // console.log($('#new-item').attr('action'))
   });
 
 
@@ -62,7 +62,6 @@ $(()=> {
         $('#new-item').attr('action', '/reminders');
         clickReset();
     }
-    console.log($('#new-item').attr('action'))
   });
 
 
@@ -76,7 +75,6 @@ $(()=> {
         $('#new-item').attr('action', '/reminders');
         clickReset();
     }
-    console.log($('#new-item').attr('action'))
   });
 
   // This sets the POST route to books
@@ -89,7 +87,6 @@ $(()=> {
         $('#new-item').attr('action', '/reminders');
         clickReset();
     }
-    console.log($('#new-item').attr('action'))
   });
 
   $(".fa-times").on("click", () => {
