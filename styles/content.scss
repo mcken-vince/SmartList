@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   h3 {
     text-align: center;
     color: white;
@@ -61,5 +62,10 @@
         transform: translateY(-3px) translateX(-3px);
       }
     }
+  }
+
+  .select-list {
+    width: 85%;
+
   }
 }
