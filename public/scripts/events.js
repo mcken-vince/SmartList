@@ -54,11 +54,12 @@ $(()=> {
       $container.removeClass('select-list');
     } else {
       const category = $container.attr('class').split('-')[0];
+      console.log(`GET /${category}`)
       $.ajax({
         url: `/${category}`,
         type: 'GET',
-        success: () => {
-          appendListElements();
+        success: (reminders) => {
+         console.log("reminders: ", reminders);
         }
       });
 
