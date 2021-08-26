@@ -7,11 +7,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   height:150px;
-  background-color: $color-1;
+  background-image: linear-gradient($color-1 , $color-5);
 
   span {
     font-family: $font-title;
-    color:$color-4;
+    color:$color-2;
     font-size: 35px;
     padding-left: 2vw;
 

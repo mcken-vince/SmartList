@@ -7,24 +7,44 @@
 
   h3 {
     text-align: center;
-    color: white;
     cursor: pointer;
+    color: $color-0;
+    border: 2px solid $color-5;
+    padding: 20px 0px;
+    margin: 0px;
+
+    &.movies-top {
+      background-color: $movies-color;
+    }
+
+    &.foods-top {
+      background-color: $foods-color;
+    }
+
+    &.books-top {
+      background-color: $books-color;
+    }
+
+    &.products-top {
+      background-color: $products-color;
+    }
+
   }
 
   .movies-container {
-    background: $movies-color;
+    background: $color-5;
   }
 
   .foods-container {
-    background: $foods-color;
+    background: $color-5;
   }
 
   .books-container {
-    background: $books-color;
+    background: $color-5;
   }
 
   .products-container {
-    background: $products-color;
+    background: $color-5;
   }
 
   div {
@@ -40,10 +60,10 @@
     li {
       padding: 5px 10px;
       margin: 5px 0px;
-      border: 2px solid rgba($color: $color-5, $alpha: 0.7);
+      border: 2px solid rgba($color: $color-0, $alpha: 0.7);
       list-style:none;
       display: flex;
-      color: white;
+      color: $color-0;
       justify-content: space-between;
       transition: 0.3s;
 
@@ -52,7 +72,8 @@
       }
 
       i {
-        color: rgba($color: $color-5, $alpha: 1);
+        color: rgba($color: $color-1, $alpha: 1);
+        transition:0.3s;
         &:hover {
           color: rgba($color: white, $alpha: 1);
           cursor: pointer;
