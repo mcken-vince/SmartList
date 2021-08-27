@@ -6,7 +6,7 @@ This is a smart, auto-categorizing todo list app. The user simply has to add the
 
 ## Layout
 
-!["Demo"](https://github.com/mcken-vince/SmartList/planning/SmartList-demo.gif)
+!["Demo"](https://github.com/mcken-vince/SmartList/blob/master/planning/SmartList-demo.gif)
 
 ## Getting Started
 
