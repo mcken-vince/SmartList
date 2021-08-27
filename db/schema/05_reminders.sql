@@ -12,8 +12,8 @@ CREATE TABLE reminders (
   user_id INTEGER REFERENCES users(id),
   type_id INTEGER REFERENCES reminder_types(id),
   name VARCHAR(255) NOT NULL,
-  image_link VARCHAR(255),
+  image_link TEXT,
   description TEXT,
-  url VARCHAR(255), 
+  url TEXT, 
   time DATE NOT NULL
 );
