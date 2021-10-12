@@ -9,7 +9,7 @@
     "local": "./node_modules/.bin/nodemon -L --ignore public/",
     "db:reset": "node bin/resetdb.js"
   },
-  "author": "Lighthouse Labs",
+  "author": "Vincent McKen, Lliam McBean, Drew Kang",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
