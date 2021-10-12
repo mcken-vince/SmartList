@@ -72,6 +72,3 @@ The following steps are only for _one_ of the group members to perform.
 - NPM 5.x or above
 - PG 6.x
 
-## Sidenotes from Development
-
-- Conflict during click event, issue w/ two document ready functions (deleting the reminder was not firing before modal).
