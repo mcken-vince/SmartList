@@ -4,7 +4,6 @@ header {
   height: 250px;
   width:100vw;
   background-image: $header-background-image;
-  // background: url('https://gfycat.com/candidhappyblackbuck.gif');
   background-color: $color-5;
   display:flex;
   justify-content: center;
@@ -73,8 +72,6 @@ div.below-header {
   -webkit-perspective: 230px;
   perspective: 230px;
 }
-
-
 .btn-12 span {
   background: linear-gradient(0deg, $color-3 0%, $color-2 100%);
   display: block;

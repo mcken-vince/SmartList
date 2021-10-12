@@ -17,7 +17,8 @@
         padding: 15px 30px;
         background: #f4f4f4;
         border-radius:15px;
-        background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+        background-color: $color-0;
+        // background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
         i {
             &:hover {
                 transition: 0.3s;
