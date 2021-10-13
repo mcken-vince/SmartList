@@ -30,9 +30,9 @@
       <span class="user-input-toggle">Smart TODO List</span>
       <% if (!username) { %>
         <form class="nav-top-right" action="/login" method="POST">
-          <div class="form-group">
+          <div class="form-group user-welcome">
             <label for="username">Username:</label>
-            <input type="text" name="username" placeholder="Enter Username">
+            <input class="user-welcome" type="text" name="username" placeholder="Enter Username">
           </div>
           <button class='identify' type="submit">Login</button>
         </form>
