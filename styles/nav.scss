@@ -7,7 +7,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   height:150px;
-  background-image: linear-gradient($color-4 , $color-5);
+  // background-image: linear-gradient($color-0 , $color-5);
+  background-color: $color-5;
 
   span {
     font-family: $font-title;
@@ -18,6 +19,10 @@ nav {
     &:hover {
       cursor: pointer;
     }
+
+  }
+  .user-welcome {
+    color: $color-0;
   }
 
   .nav-top-right {
